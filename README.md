@@ -12,7 +12,7 @@ Due to the fact that i lost the password provided by the sender and only remembe
 crunch 10 10 \&ABCD
 
 # Use fcrackzip with the generated wordlist to brute-force all possible characters
-fcrackzip -u -p <path-to-wordlist> <path-to-zip-file>
+fcrackzip -v -u -D -p <path-to-wordlist> <path-to-zip-file>
 ```
 
 Note: fcrackzip itself contains a option to use generated brute-force words to open the file but i think crunch was easier for my special user-case with only a set of given characters
