@@ -35,7 +35,7 @@ ssh -i id_ed25519 user@host
 
 Configure ssh to automatically use the privat-key:
 - Copy private key (in my case `id_ed25519`) to `~/.ssh/`
-Create/edit `~/.ssh/config` file
+- Create/edit `~/.ssh/config` file
 ```
 Host <Shortname>
      HostName <IP/DNS>
