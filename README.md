@@ -17,6 +17,7 @@ fcrackzip -v -u -D -p <path-to-wordlist> <path-to-zip-file>
 
 Note: fcrackzip itself contains a option to use generated brute-force words to open the file but i think crunch was easier for my special user-case with only a set of given characters
 
+-------------
 
 ## SSH authentication using privat-/public key (ED25519 || RSA)
 ```
@@ -41,4 +42,35 @@ Host <Shortname>
      HostName <IP/DNS>
      User     <user>
      IdentityFile       ~/.ssh/id_ed25519
+```
+
+
+--------------
+
+## Shell-Script Arguments/Options
+
+Parser for -options/arguments passed on start
+```
+# When no arguments are given - call help-function
+if [ $# -eq 0 ]; then
+  help
+fi
+
+# Iterate through passed arguments
+while [ $# -ne 0 ]
+do
+    arg="$1"
+    case "$arg" in
+        -install)
+            # Whats todo on "-install"?
+        ;;
+        -start)
+            # Whats todo on "-start"
+        ;;
+        *)
+            # Else help
+        ;;
+    esac
+    shift # Go ahead to next argument
+done
 ```
