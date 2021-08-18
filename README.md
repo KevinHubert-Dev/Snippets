@@ -88,3 +88,12 @@ e.g.
 # When "127.0.0.1:12345" is browsed ssh tunnel to "myname"-server and forward to localhost:10100 
 ssh -N myname -L 12345:localhost:10100
 ```
+
+## Access GitHub using SSH-Key URL
+Follow steps from: SSH authentication using privat-/public key (ED25519 || RSA)
+Enter private key in ssh-key-config of github
+Execute the following command to update the origin-url of the affected repositories.
+
+```
+git remote set-url origin git@github.com:$USERNAME/$REPONAME.git
+```
